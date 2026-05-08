@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація — Fashion Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <header>
+        <div class="container">
+            <div class="logo">Fashion Store</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li class="dropdown">
+                        <a href="catalog.html">Колекції ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Сукні</a></li>
+                            <li><a href="#">Сорочки</a></li>
+                            <li><a href="#">Футболки</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="register.html">Реєстрація</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 50px 0;">
+        <section style="max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <h1 style="text-align: center; margin-bottom: 20px;">Стати частиною клубу</h1>
+            <p style="text-align: center; margin-bottom: 30px; color: #666;">Зареєструйтеся, щоб отримувати персональні знижки та запрошення на закриті покази.</p>
+
+            <form action="#" method="post" style="display: flex; flex-direction: column; gap: 15px;">
+                
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required placeholder="Анна">
+
+                <label for="user-email">Електронна пошта (email):</label>
+                <input type="email" id="user-email" name="email" required placeholder="example@mail.com">
+
+                <label for="user-tel">Номер телефону (tel):</label>
+                <input type="tel" id="user-tel" name="tel" 
+                       pattern="^\+380\d{9}$" 
+                       required placeholder="+380XXXXXXXXX">
+                <small>Формат: +380 та 9 цифр</small>
+
+                <label for="bday">Дата народження (для подарунків):</label>
+                <input type="date" id="bday" name="bday">
+
+                <label for="fitting-time">Бажаний час візиту в шоурум (datetime-local):</label>
+                <input type="datetime-local" id="fitting-time" name="fitting-time">
+
+                <label for="social">Посилання на ваш Instagram/TikTok (url):</label>
+                <input type="url" id="social" name="social" placeholder="https://instagram.com/user">
+
+                <label>
+                    <input type="checkbox" required> Я погоджуюся з політикою конфіденційності
+                </label>
+
+                <button type="submit" style="background: #1a1a1a; color: #fff; padding: 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">
+                    Зареєструватися
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Fashion Store. Всі права захищені.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
