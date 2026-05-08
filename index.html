@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store — Магазин жіночого одягу</title>
+    <meta name="description" content="Найкращий вибір жіночого одягу: сукні, костюми та аксесуари.">
+    <meta name="keywords" content="одяг, жіночий одяг, купити сукню, мода">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <header>
+        <div class="container">
+            <div class="logo">Fashion Store</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li class="dropdown">
+                        <a href="catalog.html">Колекції ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Сукні</a></li>
+                            <li><a href="#">Костюми</a></li>
+                            <li><a href="#">Аксесуари</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="register.html">Реєстрація</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Нова весняна колекція 2026</h1>
+                <p>Відчуйте легкість та стиль у кожній деталі нашого одягу.</p>
+                <a href="catalog.html" class="btn-login" style="background: #333; color: #fff; padding: 10px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px;">Перейти до каталогу</a>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 50px 0; text-align: center;">
+            <h2>Про наш бренд</h2>
+            <p style="max-width: 800px; margin: 20px auto;">Ми створюємо одяг для жінок, які цінують комфорт та елегантність. Перегляньте наше промо-відео, щоб дізнатися більше про процес створення колекцій.</p>
+            
+            <div style="margin-top: 30px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <video controls width="100%" style="max-width: 800px;">
+                    <source src="src/video/lookbook.mp4" type="video/mp4">
+                    Ваш браузер не підтримує відтворення відео.
+                </video>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Наші переваги</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <h3>Висока якість</h3>
+                    <p>Використовуємо лише натуральні італійські тканини.</p>
+                </article>
+                <article class="product-card">
+                    <h3>Унікальний дизайн</h3>
+                    <p>Кожна річ створюється обмеженим тиражем.</p>
+                </article>
+                <article class="product-card">
+                    <h3>Швидка доставка</h3>
+                    <p>Відправляємо замовлення у день оплати по всій Україні.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <p>&copy; 2026 Fashion Store. Всі права захищені.</p>
+                <p>Контакти: +380 99 123 45 67 | fashion@store.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
