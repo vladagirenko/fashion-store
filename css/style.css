@@ -10,17 +10,13 @@
   --text-muted: #79757e;
   --accent: #c8503a;
   --accent-light: #e8705c;
-
   --main-font: 'Playfair Display', serif;
   --body-font: 'DM Sans', sans-serif;
-
   --round-sm: 4px;
   --round-md: 8px;
   --round-lg: 20px;
-
   --shadow: 0 5px 15px rgba(0,0,0,0.05);
   --shadow-hover: 0 10px 30px rgba(0,0,0,0.1);
-
   --speed: 0.3s;
 }
 
@@ -157,6 +153,12 @@ ul {
   transform: translateY(-3px);
 }
 
+.section-header, .page-hero, .hero-inner {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero {
   background: var(--dark);
   color: #fff;
@@ -166,10 +168,6 @@ ul {
 .hero-inner {
   max-width: 1140px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
-  align-items: center;
 }
 
 .hero-title {
@@ -182,6 +180,16 @@ ul {
   font-size: 1.1rem;
   opacity: 0.6;
   margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
 }
 
 .product-grid {
@@ -206,15 +214,24 @@ ul {
   box-shadow: var(--shadow-hover);
 }
 
+.product-card:hover .card-img-wrap img {
+  transform: none;
+}
+
 .card-img-wrap {
   aspect-ratio: 3/4;
   background: #eee;
+  position: relative;
 }
 
 .card-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.card-img-wrap::after {
+  display: none;
 }
 
 .card-body {
@@ -237,7 +254,8 @@ ul {
   width: 100%;
   border-collapse: collapse;
   margin: 30px 0;
-  background: rgba(255,255,255,0.05);
+  background: var(--white);
+  box-shadow: var(--shadow);
 }
 
 .materials-table th {
@@ -251,23 +269,36 @@ ul {
 
 .materials-table td {
   padding: 12px 15px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  color: #eee;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.register-section {
+  padding: 80px 20px;
 }
 
 .register-form-wrap {
   background: #fff;
-  padding: 40px;
+  padding: 60px;
   border-radius: var(--round-lg);
   box-shadow: var(--shadow);
-  max-width: 700px;
-  margin: 40px auto;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 40px;
+  border: none;
+}
+
+.field-wrap {
+  margin-bottom: 25px;
 }
 
 .field-input {
   width: 100%;
-  padding: 12px;
-  margin-top: 5px;
+  padding: 15px;
+  margin-top: 8px;
   border: 2px solid #eee;
   border-radius: 6px;
   outline: none;
@@ -275,6 +306,23 @@ ul {
 
 .field-input:focus {
   border-color: var(--accent);
+}
+
+.video-section {
+  background: var(--dark-gray);
+  padding: 80px 20px;
+}
+
+.video-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--round-lg);
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  display: block;
 }
 
 .site-footer {
@@ -290,5 +338,8 @@ ul {
   }
   .hero-title {
     font-size: 2.5rem;
+  }
+  .register-form-wrap {
+    padding: 30px;
   }
 }
