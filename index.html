@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="MODE — сучасний магазин жіночого одягу. Елегантність та стиль у кожній деталі." />
-  <meta name="keywords" content="жіночий одяг, купити сукню, сорочки, футболки, мода 2025, MODE" />
+  <meta name="keywords" content="жіночий одяг, купити сукню, сорочки, футболки, мода 2026, MODE" />
   <meta name="author" content="Влада Гіренко" />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="MODE — Жіночий одяг" />
@@ -16,18 +16,28 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">MODE</a>
       <nav class="main-nav">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link active">Головна</a></li>
-          <li><a href="catalog/index.html" class="nav-link">Каталог</a></li>
+          <li class="has-dropdown">
+            <a href="catalog/index.html" class="nav-link">Каталог</a>
+            <ul class="dropdown">
+              <li><a href="catalog/index.html#dresses">Сукні</a></li>
+              <li><a href="catalog/index.html#shirts">Сорочки</a></li>
+              <li><a href="catalog/index.html#tshirts">Футболки</a></li>
+            </ul>
+          </li>
           <li><a href="register/index.html" class="nav-link">Реєстрація</a></li>
+          <li><a href="#contacts" class="nav-link">Контакти</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main>
     <section class="hero">
       <div class="hero-inner">
@@ -35,6 +45,7 @@
           <h1 class="hero-title">Елегантність<br /><em>у кожній деталі</em></h1>
           <p class="hero-sub">Колекція для тих, хто цінує стиль. <strong>MODE</strong> — це про вашу впевненість.</p>
           <a href="catalog/index.html" class="btn-primary">До каталогу</a>
+          
           <div class="hero-stats">
             <div><span class="hero-stat-num">6+</span><span class="hero-stat-label">Моделей</span></div>
             <div><span class="hero-stat-num">3</span><span class="hero-stat-label">Категорії</span></div>
@@ -43,6 +54,29 @@
         </div>
       </div>
     </section>
+
+    <section class="featured">
+      <div class="section-header">
+        <h2 class="section-title">Обрані <em>товари</em></h2>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="card-img-wrap"><img src="src/images/dress1.jpg" alt="Сукня" /></div>
+          <div class="card-body">
+            <h3 class="card-title">Сукня міні</h3>
+            <a href="catalog/index.html" class="card-link">Детальніше</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="card-img-wrap"><img src="src/images/shirt1.jpg" alt="Сорочка" /></div>
+          <div class="card-body">
+            <h3 class="card-title">Сорочка з попліну</h3>
+            <a href="catalog/index.html" class="card-link">Детальніше</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="info-section">
       <div class="section-header">
         <h2 class="section-title">Наш <em>сервіс</em></h2>
@@ -60,13 +94,15 @@
           <li>
             <strong>Переваги бренду:</strong>
             <ul class="sub-steps">
-              <li>Використання натуральних тканин</li>
+              <li>Використання натуральних тканин (бавовна, котон)</li>
               <li>Унікальний дизайн кожної колекції</li>
+              <li>Еко-пакування замовлень</li>
             </ul>
           </li>
         </ol>
       </div>
     </section>
+
     <section class="media-section">
       <div class="section-header">
         <h2 class="section-title">Медіа <em>презентація</em></h2>
@@ -78,14 +114,15 @@
           </video>
         </div>
         <div class="audio-box">
-          <p>Музичний супровід:</p>
+          <p>Музичний супровід колекції:</p>
           <audio controls>
             <source src="src/audio/ambient.mp3" type="audio/mpeg" />
           </audio>
         </div>
       </div>
     </section>
-    <section class="map-link-section">
+
+    <section class="map-link-section" id="contacts">
       <div class="section-header">
         <h2 class="section-title">Завітайте <em>до нас</em></h2>
         <p class="section-desc">Наш шоурум знаходиться у центрі міста. Будемо раді бачити вас!</p>
@@ -93,6 +130,7 @@
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <a href="index.html" class="footer-logo">MODE</a>
@@ -103,8 +141,9 @@
           <li><a href="register/index.html">Реєстрація</a></li>
         </ul>
       </nav>
-      <small class="footer-copy">© 2025 MODE. Всі права захищено.</small>
+      <small class="footer-copy">© 2026 MODE. Всі права захищено.</small>
     </div>
   </footer>
+
 </body>
 </html>
