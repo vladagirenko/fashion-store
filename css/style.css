@@ -18,14 +18,14 @@
   --speed: 0.3s;
 }
 
-* { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html { 
-  scroll-behavior: smooth; 
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,18 +35,18 @@ body {
   background: var(--bg-color);
 }
 
-img { 
-  display: block; 
-  max-width: 100%; 
+img {
+  display: block;
+  max-width: 100%;
 }
 
-a { 
-  color: inherit; 
-  text-decoration: none; 
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-ul { 
-  list-style: none; 
+ul {
+  list-style: none;
 }
 
 .site-header {
@@ -55,7 +55,7 @@ ul {
   z-index: 100;
   background: rgba(15, 15, 20, 0.95);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-inner {
@@ -86,16 +86,16 @@ ul {
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   transition: 0.2s;
 }
 
-.nav-link:hover { 
-  color: var(--accent-light); 
+.nav-link:hover {
+  color: var(--accent-light);
 }
 
-.has-dropdown { 
-  position: relative; 
+.has-dropdown {
+  position: relative;
 }
 
 .dropdown {
@@ -120,11 +120,11 @@ ul {
   display: block;
   padding: 8px 20px;
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .dropdown li a:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--accent-light);
 }
 
@@ -146,7 +146,9 @@ ul {
   background: var(--accent-light);
 }
 
-.section-header, .page-hero, .hero-inner {
+.section-header,
+.page-hero,
+.hero-inner {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -214,11 +216,7 @@ ul {
 }
 
 .product-card:hover {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.product-card:hover .card-img-wrap img {
-  transform: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-wrap {
@@ -374,6 +372,120 @@ video {
   display: block;
 }
 
+.order-section {
+  padding: 80px 20px;
+  background: var(--bg-color);
+}
+
+.order-section-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.order-section .section-header {
+  margin-bottom: 50px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: var(--main-font);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.order-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-step {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--round-lg);
+  padding: 30px 35px;
+  box-shadow: var(--shadow);
+  transition: box-shadow var(--speed), transform var(--speed);
+}
+
+.order-step:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.09);
+  transform: translateY(-3px);
+}
+
+.step-marker {
+  font-family: var(--main-font);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.2;
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 60px;
+  text-align: center;
+  transition: opacity var(--speed);
+}
+
+.order-step:hover .step-marker {
+  opacity: 0.5;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  display: block;
+  font-family: var(--main-font);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.step-sub {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.step-sub li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.step-sub li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
 @media (max-width: 850px) {
   .hero-inner, .product-grid {
     grid-template-columns: 1fr;
@@ -383,5 +495,17 @@ video {
   }
   .hero-title {
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .order-step {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+  .step-marker {
+    font-size: 1.8rem;
+    min-width: auto;
   }
 }
