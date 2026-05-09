@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Реєстрація — MODE</title>
+  <title>Акаунт — MODE</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -53,11 +53,11 @@
             </fieldset>
 
             <fieldset class="form-group">
-              <legend class="form-legend">Що вас цікавить?</legend>
+              <legend class="form-legend">Ваші інтереси</legend>
               <div class="checkbox-group">
-                <label class="checkbox-label"><input type="checkbox" /> Сукні</label>
-                <label class="checkbox-label"><input type="checkbox" /> Сорочки</label>
-                <label class="checkbox-label"><input type="checkbox" /> Футболки</label>
+                <label class="checkbox-label"><input type="checkbox" name="interest" value="dresses" /> Сукні</label>
+                <label class="checkbox-label"><input type="checkbox" name="interest" value="shirts" /> Сорочки</label>
+                <label class="checkbox-label"><input type="checkbox" name="interest" value="tshirts" /> Футболки</label>
               </div>
             </fieldset>
 
@@ -65,20 +65,20 @@
           </form>
         </div>
 
-        <div class="register-form-wrap" style="margin-top: 50px;">
+        <aside class="register-form-wrap" id="login-box" style="margin-top: 50px;">
           <h2 class="form-heading">Вхід</h2>
           <form class="register-form">
             <div class="field-wrap">
-              <label for="l-email" class="field-label">Email</label>
-              <input type="email" id="l-email" class="field-input" placeholder="example@email.com" required />
+              <label for="login-email" class="field-label">Email</label>
+              <input type="email" id="login-email" class="field-input" placeholder="example@email.com" required />
             </div>
             <div class="field-wrap">
-              <label for="l-pass" class="field-label">Пароль</label>
-              <input type="password" id="l-pass" class="field-input" placeholder="********" required />
+              <label for="login-pass" class="field-label">Пароль</label>
+              <input type="password" id="login-pass" class="field-input" placeholder="********" required />
             </div>
             <button type="submit" class="btn-primary">Увійти</button>
           </form>
-        </div>
+        </aside>
 
       </div>
     </section>
