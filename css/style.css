@@ -158,7 +158,7 @@ ul {
 }
 
 .hero {
-  background: var(--dark);
+  background: linear-gradient(135deg, var(--dark) 0%, #2a1b25 100%);
   color: #fff;
   padding: 90px 20px;
 }
