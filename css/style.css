@@ -8,8 +8,8 @@
   --border: #e8e3dc;
   --text-main: #18181f;
   --text-muted: #79757e;
-  --accent: #c8503a;
-  --accent-light: #e8705c;
+  --accent: #d13d7e;
+  --accent-light: #f16db1;
   --main-font: 'Playfair Display', serif;
   --body-font: 'DM Sans', sans-serif;
   --round-md: 8px;
@@ -91,7 +91,7 @@ ul {
 }
 
 .nav-link:hover { 
-  color: #fff; 
+  color: var(--accent-light); 
 }
 
 .has-dropdown { 
@@ -125,7 +125,7 @@ ul {
 
 .dropdown li a:hover {
   background: rgba(255,255,255,0.1);
-  color: #fff;
+  color: var(--accent-light);
 }
 
 .btn-primary {
@@ -334,3 +334,54 @@ video {
 .site-footer {
   background: var(--dark);
   padding: 70px 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: var(--main-font);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  display: block;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 25px 0;
+}
+
+.footer-nav a {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  color: var(--accent-light);
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 20px;
+  display: block;
+}
+
+@media (max-width: 850px) {
+  .hero-inner, .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .register-form-wrap {
+    padding: 40px 20px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
