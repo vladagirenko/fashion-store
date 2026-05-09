@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Створіть свій особистий акаунт у MODE." />
+  <meta name="author" content="Влада Гіренко" />
   <title>Акаунт — MODE</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-
   <header class="site-header">
     <div class="header-inner">
       <a href="../index.html" class="logo">MODE</a>
@@ -20,23 +21,20 @@
       </nav>
     </div>
   </header>
-
   <main>
     <section class="page-hero">
       <h1 class="page-title">Акаунт</h1>
-      <p class="page-sub">Доєднуйтесь до нашої спільноти</p>
+      <p class="page-sub">Приєднуйтесь до нашої спільноти</p>
     </section>
-
     <section class="register-section">
       <div class="register-layout">
-        
         <div class="register-form-wrap">
           <h2 class="form-heading">Створити акаунт</h2>
-          <form class="register-form">
+          <form class="register-form" action="#" method="post">
             <fieldset class="form-group">
               <div class="field-wrap">
-                <label for="name" class="field-label">Ім'я та прізвище</label>
-                <input type="text" id="name" class="field-input" placeholder="Олена Ковальчук" required />
+                <label for="name" class="field-label">Ім'я</label>
+                <input type="text" id="name" class="field-input" placeholder="Олена Ковальчук" required minlength="2" />
               </div>
               <div class="field-wrap">
                 <label for="email" class="field-label">Email</label>
@@ -47,56 +45,43 @@
                 <input type="tel" id="tel" class="field-input" placeholder="+380XXXXXXXXX" pattern="\+380[0-9]{9}" required />
               </div>
               <div class="field-wrap">
-                <label for="password" class="field-label">Створіть пароль</label>
-                <input type="password" id="password" class="field-input" placeholder="********" required />
+                <label for="social" class="field-label">Instagram/TikTok (URL)</label>
+                <input type="url" id="social" class="field-input" placeholder="https://instagram.com/username" />
+              </div>
+              <div class="field-wrap">
+                <label for="visit" class="field-label">Дата візиту</label>
+                <input type="datetime-local" id="visit" class="field-input" required />
+              </div>
+              <div class="field-wrap">
+                <label for="pass" class="field-label">Пароль</label>
+                <input type="password" id="pass" class="field-input" placeholder="********" required minlength="8" />
               </div>
             </fieldset>
-
-            <fieldset class="form-group">
-              <legend class="form-legend">Ваші інтереси</legend>
-              <div class="checkbox-group">
-                <label class="checkbox-label"><input type="checkbox" name="interest" value="dresses" /> Сукні</label>
-                <label class="checkbox-label"><input type="checkbox" name="interest" value="shirts" /> Сорочки</label>
-                <label class="checkbox-label"><input type="checkbox" name="interest" value="tshirts" /> Футболки</label>
-              </div>
-            </fieldset>
-
             <button type="submit" class="btn-primary">Зареєструватись</button>
           </form>
         </div>
-
         <aside class="register-form-wrap" id="login-box" style="margin-top: 50px;">
           <h2 class="form-heading">Вхід</h2>
           <form class="register-form">
             <div class="field-wrap">
-              <label for="login-email" class="field-label">Email</label>
-              <input type="email" id="login-email" class="field-input" placeholder="example@email.com" required />
+              <label for="l-email" class="field-label">Email</label>
+              <input type="email" id="l-email" class="field-input" required />
             </div>
             <div class="field-wrap">
-              <label for="login-pass" class="field-label">Пароль</label>
-              <input type="password" id="login-pass" class="field-input" placeholder="********" required />
+              <label for="l-pass" class="field-label">Пароль</label>
+              <input type="password" id="l-pass" class="field-input" required />
             </div>
             <button type="submit" class="btn-primary">Увійти</button>
           </form>
         </aside>
-
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-logo">MODE</p>
-      <nav>
-        <ul class="footer-nav">
-          <li><a href="../index.html">Головна</a></li>
-          <li><a href="../catalog/index.html">Каталог</a></li>
-          <li><a href="index.html">Реєстрація</a></li>
-        </ul>
-      </nav>
-      <p class="footer-copy">&copy; 2025 MODE. Всі права захищено.</p>
+      <p class="footer-copy">© 2025 MODE. Всі права захищено.</p>
     </div>
   </footer>
-
 </body>
 </html>
