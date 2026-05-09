@@ -3,16 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MODE — сучасний магазин жіночого одягу. Елегантність та стиль у кожній деталі." />
-  <meta name="keywords" content="жіночий одяг, купити сукню, сорочки, футболки, мода 2026, MODE" />
-  <meta name="author" content="Влада Гіренко" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="MODE — Жіночий одяг" />
-  <meta property="og:description" content="Елегантний жіночий одяг для вашої впевненості." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vladagirenko.github.io/fashion-store/" />
-  <meta property="og:image" content="src/images/dress1.jpg" />
-  <title>MODE — Жіночий одяг</title>
+  <title>MODE — Магазин жіночого одягу</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -20,7 +11,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">MODE</a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Головне меню">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link active">Головна</a></li>
           <li class="has-dropdown">
@@ -38,56 +29,234 @@
   </header>
 
   <main>
-    <section class="hero">
+
+    <section class="hero" aria-label="Головний банер">
       <div class="hero-inner">
         <div class="hero-content">
-          <h1 class="hero-title">Елегантність<br /><em>у кожній деталі</em></h1>
-          <p class="hero-sub">Колекція для тих, хто цінує стиль. <strong>MODE</strong> — це про вашу впевненість.</p>
+          <span class="hero-eyebrow">Колекція сезону 2026</span>
+          <h1 class="hero-title">Стиль<br /><em>у кожному русі</em></h1>
+          <p class="hero-sub">Створюємо одяг, що підкреслює вашу індивідуальність. Обирайте речі, які стануть продовженням вашого внутрішнього світу.</p>
           <a href="catalog/index.html" class="btn-primary">До каталогу</a>
-          
           <div class="hero-stats">
-            <div><span class="hero-stat-num">6+</span><span class="hero-stat-label">Моделей</span></div>
-            <div><span class="hero-stat-num">3</span><span class="hero-stat-label">Категорії</span></div>
-            <div><span class="hero-stat-num">100%</span><span class="hero-stat-label">Якість</span></div>
+            <div>
+              <span class="hero-stat-num">10+</span>
+              <span class="hero-stat-label">Новинок</span>
+            </div>
+            <div>
+              <span class="hero-stat-num">3</span>
+              <span class="hero-stat-label">Категорії</span>
+            </div>
+            <div>
+              <span class="hero-stat-num">100%</span>
+              <span class="hero-stat-label">Натурально</span>
+            </div>
           </div>
         </div>
+        <aside class="hero-aside" aria-label="Анонс товарів">
+          <div class="aside-card">
+            <span class="aside-label">⭐ Популярне</span>
+            <p>Моделююча сукня міні у молочному кольорі</p>
+          </div>
+          <div class="aside-card">
+            <span class="aside-label">✨ Новинка</span>
+            <p>Оверсайз футболка з витонченим мереживом</p>
+          </div>
+          <div class="aside-card">
+            <span class="aside-label">🔥 Хіт</span>
+            <p>Класична поплінова сорочка — небесно-блакитна</p>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="info-section">
+    <section class="featured" aria-labelledby="featured-heading">
       <div class="section-header">
-        <h2 class="section-title">Наш <em>сервіс</em></h2>
+        <span class="section-eyebrow">Ваш вибір</span>
+        <h2 id="featured-heading" class="section-title">Обрані <em>товари</em></h2>
+        <p class="section-sub">Актуальні пропозиції, що стали фаворитами наших клієнток</p>
       </div>
-      <div class="nested-list-wrap">
-        <ol class="main-steps">
-          <li>
-            <strong>Процес покупки:</strong>
-            <ul class="sub-steps">
-              <li>Вибір моделі в каталозі за артикулом</li>
-              <li>Перевірка наявності потрібного розміру</li>
-              <li>Оформлення швидкої доставки</li>
-            </ul>
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="card-img-wrap">
+            <img src="src/images/dress1.jpg" alt="Молочна сукня міні" loading="lazy" />
+            <span class="card-badge">Хіт</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Молочна сукня міні з ефектом моделювання</h3>
+            <p class="card-meta">Сукні · еластан / поліестер</p>
+            <a href="catalog/index.html#dress1" class="card-link">Переглянути деталі →</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-img-wrap">
+            <img src="src/images/dress2.jpg" alt="Сукня міді у квіточку" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Ярусна сукня міді у блакитний квітковий принт</h3>
+            <p class="card-meta">Сукні · легкий шифон</p>
+            <a href="catalog/index.html#dress2" class="card-link">Переглянути деталі →</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-img-wrap">
+            <img src="src/images/shirt1.jpg" alt="Блакитна сорочка" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Блакитна сорочка з попліну на довгий рукав</h3>
+            <p class="card-meta">Сорочки · натуральна бавовна</p>
+            <a href="catalog/index.html#shirt1" class="card-link">Переглянути деталі →</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-img-wrap">
+            <img src="src/images/tshirt1.jpg" alt="Рожева футболка" loading="lazy" />
+            <span class="card-badge">Новинка</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Рожева футболка оверсайз із принтом 'Wear Lipstick'</h3>
+            <p class="card-meta">Футболки · щільний котон</p>
+            <a href="catalog/index.html#tshirt1" class="card-link">Переглянути деталі →</a>
+          </div>
+        </article>
+
+      </div>
+      <div class="view-all-wrap">
+        <a href="catalog/index.html" class="btn-outline">Увесь каталог</a>
+      </div>
+    </section>
+
+    <section class="order-section" aria-labelledby="order-heading">
+      <div class="order-section-inner">
+        <div class="section-header">
+          <span class="section-eyebrow">Сервіс</span>
+          <h2 id="order-heading" class="section-title">Як замовити образ від <em>MODE</em></h2>
+        </div>
+        <ol class="order-steps">
+
+          <li class="order-step">
+            <div class="step-marker">01</div>
+            <div class="step-content">
+              <strong class="step-title">Вибір та консультація</strong>
+              <ul class="step-sub">
+                <li>Обирайте моделі в нашому онлайн-каталозі.</li>
+                <li>Отримайте допомогу з підбором розміру в онлайн-чаті.</li>
+                <li>Оплачуйте онлайн або при отриманні замовлення.</li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <strong>Переваги бренду:</strong>
-            <ul class="sub-steps">
-              <li>Використання натуральних тканин (бавовна, котон)</li>
-              <li>Унікальний дизайн кожної колекції</li>
-              <li>Еко-пакування замовлень</li>
-            </ul>
+
+          <li class="order-step">
+            <div class="step-marker">02</div>
+            <div class="step-content">
+              <strong class="step-title">Якість та пакування</strong>
+              <ul class="step-sub">
+                <li>Ретельна перевірка кожного виробу перед відправкою.</li>
+                <li>Пакування у фірмову еко-коробку для збереження форми.</li>
+                <li>Приємне доповнення до кожної вашої покупки.</li>
+              </ul>
+            </div>
           </li>
+
+          <li class="order-step">
+            <div class="step-marker">03</div>
+            <div class="step-content">
+              <strong class="step-title">Швидка доставка</strong>
+              <ul class="step-sub">
+                <li>Відправка замовлень поштовими службами за 24 години.</li>
+                <li>Зручна примірка у відділенні перед фінальною оплатою.</li>
+                <li>Знижка 10% на наступне замовлення за ваш відгук.</li>
+              </ul>
+            </div>
+          </li>
+
         </ol>
       </div>
     </section>
 
-    <section class="media-section">
-      <div class="section-header">
-        <h2 class="section-title">Презентація <em>колекції</em></h2>
+    <div class="dark-section" aria-labelledby="materials-heading">
+      <div class="dark-section-inner">
+        <div class="section-header">
+          <span class="section-eyebrow">Матеріали</span>
+          <h2 id="materials-heading" class="section-title section-title--light">Характеристики тканин</h2>
+          <p class="section-sub section-sub--light">Дізнайтеся більше про склад та особливості догляду</p>
+        </div>
+        <div class="table-wrap">
+          <table class="materials-table">
+            <caption>Склад та рекомендації з догляду за виробами</caption>
+            <thead>
+              <tr>
+                <th scope="col">Категорія</th>
+                <th scope="col">Тканина</th>
+                <th scope="col">Склад</th>
+                <th scope="col">Догляд</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Сукні</strong></td>
+                <td>Шовк Армані</td>
+                <td>95% поліестер, 5% еластан</td>
+                <td>Прання при 30°C (делікатний режим)</td>
+              </tr>
+              <tr>
+                <td><strong>Сорочки</strong></td>
+                <td>Бавовняний поплін</td>
+                <td>100% бавовна</td>
+                <td>Машинне прання та легке прасування</td>
+              </tr>
+              <tr>
+                <td><strong>Футболки</strong></td>
+                <td>Кулірна гладь</td>
+                <td>95% бавовна, 5% лайкра</td>
+                <td>Делікатний віджим, сушка в тіні</td>
+              </tr>
+              <tr>
+                <td><strong>Костюми</strong></td>
+                <td>Вовна з віскозою</td>
+                <td>50% вовна, 50% віскоза</td>
+                <td>Рекомендована професійна чистка</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="media-container">
-        <div class="video-box">
-          <video controls poster="src/images/dress1.jpg">
-            <source src="src/video/lookbook.mp4" type="video/mp4" />
+    </div>
+
+    <div class="video-section" aria-labelledby="video-heading">
+      <div class="video-section-inner">
+        <div class="section-header">
+          <span class="section-eyebrow">Відео</span>
+          <h2 id="video-heading" class="section-title section-title--light">Наша <em>атмосфера</em></h2>
+        </div>
+        <div class="video-wrap">
+          <video controls poster="src/images/dress1.jpg" aria-label="Промо-відео MODE">
+            <source src="src/video/promo.mp4" type="video/mp4" />
+            Ваш браузер не підтримує відео.
           </video>
         </div>
       </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-logo">MODE</p>
+      <p class="footer-tagline">Якісний жіночий одяг · Україна · 2026</p>
+      <nav aria-label="Меню підвалу">
+        <ul class="footer-nav">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog/index.html">Каталог</a></li>
+          <li><a href="register/index.html">Реєстрація</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; 2026 MODE. Виготовлено в Україні.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
