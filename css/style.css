@@ -699,6 +699,253 @@ ul {
   display: block;
 }
 
+/* ==========================================================================
+   НОВИЙ БЛОК: СТОРІНКА «ПРО БРЕНД» ТА ІНТЕРАКТИВНІ ЕЛЕМЕНТИ (ЛАБОРАТОРНА №2)
+   ========================================================================== */
+
+/* ЗАВДАННЯ №1: АСИМЕТРИЧНА ДВОКИМІРНА GRID-СІТКА ДЛЯ КОЛАЖУ */
+.about-collage {
+  max-width: 1140px;
+  margin: 40px auto 80px auto;
+  padding: 0 20px;
+}
+
+.about-collage__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(180px, auto);
+  gap: 30px;
+}
+
+.about-collage__item {
+  background: var(--white);
+  border-radius: var(--round-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.about-collage__item_type_text-main {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.about-collage__item_type_img-large {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.about-collage__item_type_img-small {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+
+.about-collage__item_type_text-side {
+  grid-column: 3 / span 2;
+  grid-row: 3;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f0ebe4;
+}
+
+.about-collage__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-collage__title {
+  font-family: var(--main-font);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+.about-collage__title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.about-collage__subtitle {
+  font-family: var(--main-font);
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.about-collage__desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* СІТКА ДЛЯ СЕКЦІЇ ЦІННОСТЕЙ */
+.values {
+  padding: 80px 20px;
+  background: #f3efe9;
+}
+
+.values__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.values__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.values__card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: var(--round-lg);
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--border);
+  transition: transform 0.3s;
+}
+
+.values__card:hover {
+  transform: translateY(-5px);
+  border-top-color: var(--accent);
+}
+
+.values__card-title {
+  display: block;
+  font-family: var(--main-font);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.values__card-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ЗАВДАННЯ №3: POSITION: FIXED ЕЛЕМЕНТ З КРЕАТИВНОЮ ДЕФОРМАЦІЄЮ КУТІВ (BLOB) */
+.interactive-badge {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 70px;
+  height: 70px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(209, 61, 126, 0.4);
+  cursor: pointer;
+  
+  /* Початкова асиметрична форма кутів за допомогою border-radius */
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  transition: border-radius 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              background-color 0.3s ease;
+}
+
+.interactive-badge__text {
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+/* ПЛАСТИЧНА ДЕФОРМАЦІЯ ПРИ НАВЕДЕННІ МИШКОЮ (:HOVER) */
+.interactive-badge:hover {
+  background-color: var(--accent-light);
+  transform: scale(1.15) rotate(15deg);
+  
+  /* Кардинальна зміна геометрії радіусів для ефекту м'якої деформації рідини */
+  border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+}
+
+/* ==========================================================================
+   ЗАВДАННЯ №2: МЕДІА-ЗАПИТИ ОРІЄНТАЦІЇ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ
+   ========================================================================== */
+
+/* А: ПОРТРЕТНА ОРІЄНТАЦІЯ (Вертикальний екран смартфона/планшета) */
+@media (max-width: 768px) and (orientation: portrait) {
+  .about-collage__grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .about-collage__item_type_text-main,
+  .about-collage__item_type_img-large,
+  .about-collage__item_type_img-small,
+  .about-collage__item_type_text-side {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .about-collage__item_type_text-main {
+    padding: 30px 20px;
+  }
+
+  .about-collage__item_type_text-side {
+    padding: 30px 20px;
+  }
+
+  .values__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Б: АЛЬБОМНА ОРІЄНТАЦІЯ (Горизонтально повернутий мобільний пристрій) */
+@media (max-width: 950px) and (orientation: landscape) {
+  .about-collage__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(160px, auto);
+    gap: 20px;
+  }
+
+  .about-collage__item_type_text-main {
+    grid-column: 1 / span 2;
+    grid-row: auto;
+    padding: 35px;
+  }
+
+  .about-collage__item_type_img-large {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .about-collage__item_type_img-small {
+    grid-column: 2;
+    grid-row: auto;
+  }
+
+  .about-collage__item_type_text-side {
+    grid-column: 1 / span 2;
+    grid-row: auto;
+    padding: 35px;
+  }
+
+  .values__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .interactive-badge {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* ==========================================================================
+   ІСНУЮЧІ СТАНДАРТНІ МЕДІА-ЗАПИТИ ШИРИНИ (БЕЗ ЗМІН)
+   ========================================================================== */
 @media (max-width: 950px) {
   .hero__inner {
     grid-template-columns: 1fr;
