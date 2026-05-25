@@ -8,21 +8,21 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="../index.html" class="logo">MODE</a>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li><a href="../index.html" class="nav-link">Головна</a></li>
-          <li class="has-dropdown">
-            <a href="index.html" class="nav-link">Каталог</a>
-            <ul class="dropdown">
-              <li><a href="#dresses">Сукні</a></li>
-              <li><a href="#shirts">Сорочки</a></li>
-              <li><a href="#tshirts">Футболки</a></li>
+  <header class="header">
+    <div class="header__inner">
+      <a href="../index.html" class="header__logo">MODE</a>
+      <nav class="header__nav" aria-label="Головне меню">
+        <ul class="header__list">
+          <li class="header__item"><a href="../index.html" class="header__link">Головна</a></li>
+          <li class="header__item header__item_has-dropdown">
+            <a href="index.html" class="header__link header__link_active">Каталог</a>
+            <ul class="header__dropdown">
+              <li class="header__dropdown-item"><a href="#dresses" class="header__dropdown-link">Сукні</a></li>
+              <li class="header__dropdown-item"><a href="#shirts" class="header__dropdown-link">Сорочки</a></li>
+              <li class="header__dropdown-item"><a href="#tshirts" class="header__dropdown-link">Футболки</a></li>
             </ul>
           </li>
-          <li><a href="../register/index.html" class="nav-link">Реєстрація</a></li>
+          <li class="header__item"><a href="../register/index.html" class="header__link">Реєстрація</a></li>
         </ul>
       </nav>
     </div>
@@ -30,105 +30,115 @@
 
   <main>
     <section class="page-hero">
-      <h1 class="page-title">Каталог</h1>
-      <p class="page-sub">Колекція 2025</p>
+      <h1 class="page-hero__title">Каталог</h1>
+      <p class="page-hero__sub">Колекція 2026</p>
     </section>
 
     <section id="dresses" class="catalog-section">
       <div class="section-header">
-        <h2 class="section-title">Сукні</h2>
+        <h2 class="section-header__title">Сукні</h2>
       </div>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="../src/images/dress1.jpg" alt="Сукня міні" />
-            <span class="card-badge">Хіт</span>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Сукня міні, молочна</h3>
-            <p class="card-desc">Облягаюча модель з ефектом моделювання фігури. Еластичний матеріал.</p>
-          </div>
-        </article>
+      
+      <div class="products">
+        <div class="products__grid">
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="../src/images/dress1.jpg" alt="Сукня міні" class="product-card__img" />
+              <span class="product-card__badge product-card__badge_type_hit">Хіт</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Сукня міні, молочна</h3>
+              <p class="product-card__desc">Облягаюча модель з ефектом моделювання фігури. Еластичний матеріал.</p>
+            </div>
+          </article>
 
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="../src/images/dress2.jpg" alt="Сукня міді" />
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Сукня міді у квіточку</h3>
-            <p class="card-desc">Легкий шифон, ярусний крій. Біла в блакитні квіти.</p>
-          </div>
-        </article>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="../src/images/dress2.jpg" alt="Сукня міді" class="product-card__img" />
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Сукня міді у квіточку</h3>
+              <p class="product-card__desc">Легкий шифон, ярусний крій. Біла в блакитні квіти.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="shirts" class="catalog-section">
       <div class="section-header">
-        <h2 class="section-title">Сорочки</h2>
+        <h2 class="section-header__title">Сорочки</h2>
       </div>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="../src/images/shirt1.jpg" alt="Блакитна сорочка" />
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Сорочка з попліну</h3>
-            <p class="card-desc">Класичний крій, довгий рукав. 100% бавовна.</p>
-          </div>
-        </article>
+      
+      <div class="products">
+        <div class="products__grid">
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="../src/images/shirt1.jpg" alt="Блакитна сорочка" class="product-card__img" />
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Сорочка з попліну</h3>
+              <p class="product-card__desc">Класичний крій, довгий рукав. 100% бавовна.</p>
+            </div>
+          </article>
 
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="../src/images/shirt2.jpg" alt="Димчата сорочка" />
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Сорочка з декором</h3>
-            <p class="card-desc">Об'ємні декоровані рукава, витончений димчастий відтінок.</p>
-          </div>
-        </article>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="../src/images/shirt2.jpg" alt="Димчата сорочка" class="product-card__img" />
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Сорочка з декором</h3>
+              <p class="product-card__desc">Об'ємні декоровані рукава, витончений димчастий відтінок.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="tshirts" class="catalog-section">
       <div class="section-header">
-        <h2 class="section-title">Футболки</h2>
+        <h2 class="section-header__title">Футболки</h2>
       </div>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="../src/images/tshirt1.jpg" alt="Рожева футболка" />
-            <span class="card-badge">New</span>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Футболка Wear Lipstick</h3>
-            <p class="card-desc">Щільний котон, оверсайз фасон, яскравий принт.</p>
-          </div>
-        </article>
+      
+      <div class="products">
+        <div class="products__grid">
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="../src/images/tshirt1.jpg" alt="Рожева футболка" class="product-card__img" />
+              <span class="product-card__badge product-card__badge_type_new">New</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Футболка Wear Lipstick</h3>
+              <p class="product-card__desc">Щільний котон, оверсайз фасон, яскравий принт.</p>
+            </div>
+          </article>
 
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="../src/images/tshirt2.jpg" alt="Чорна футболка" />
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Футболка з мереживом</h3>
-            <p class="card-desc">Чорна бавовна з оздобленням мереживом шантільє.</p>
-          </div>
-        </article>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="../src/images/tshirt2.jpg" alt="Чорна футболка" class="product-card__img" />
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Футболка з мереживом</h3>
+              <p class="product-card__desc">Чорна бавовна з оздобленням мереживом шантільє.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p class="footer-logo">MODE</p>
-      <nav>
-        <ul class="footer-nav">
-          <li><a href="../index.html">Головна</a></li>
-          <li><a href="index.html">Каталог</a></li>
-          <li><a href="../register/index.html">Реєстрація</a></li>
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__logo">MODE</p>
+      <p class="footer__tagline">Якісний жіночий одяг · Україна · 2026</p>
+      <nav class="footer__nav" aria-label="Меню підвалу">
+        <ul class="footer__list">
+          <li class="footer__item"><a href="../index.html" class="footer__link">Головна</a></li>
+          <li class="footer__item"><a href="index.html" class="footer__link">Каталог</a></li>
+          <li class="footer__item"><a href="../register/index.html" class="footer__link">Реєстрація</a></li>
         </ul>
       </nav>
-      <p class="footer-copy">&copy; 2025 MODE. Всі права захищено.</p>
+      <p class="footer__copy">&copy; 2026 MODE. Всі права захищено.</p>
     </div>
   </footer>
 
