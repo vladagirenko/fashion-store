@@ -24,6 +24,7 @@
               <li class="header__dropdown-item"><a href="../catalog/index.html#tshirts" class="header__dropdown-link">Футболки</a></li>
             </ul>
           </li>
+          <li class="header__item"><a href="../about/index.html" class="header__link">Про бренд</a></li>
           <li class="header__item"><a href="index.html" class="header__link header__link_active">Реєстрація</a></li>
         </ul>
       </nav>
@@ -32,7 +33,7 @@
 
   <main>
     <section class="page-hero">
-      <h1 class="page-hero__title">Акаунт</h1>
+      <h1 class="page-hero__title">Aкаунт</h1>
       <p class="page-hero__sub">Приєднуйтесь до нашої спільноти</p>
     </section>
 
@@ -41,6 +42,14 @@
         
         <div class="register__form-wrap">
           <h2 class="register__form-heading">Створити акаунт</h2>
+          
+          <div class="profile-progress">
+            <span class="profile-progress__label">Заповнення профілю: 75%</span>
+            <div class="profile-progress__track">
+              <div class="profile-progress__fill"></div>
+            </div>
+          </div>
+
           <form class="register__form" action="#" method="post">
             <fieldset class="register__form-group">
               <div class="register__field-wrap">
@@ -66,6 +75,17 @@
               <div class="register__field-wrap">
                 <label for="pass" class="register__field-label">Пароль</label>
                 <input type="password" id="pass" class="register__field-input" placeholder="********" required minlength="8" />
+              </div>
+
+              <div class="register__checkbox-group">
+                <div class="custom-checkbox">
+                  <input type="checkbox" id="terms" class="custom-checkbox__input" required />
+                  <label for="terms" class="custom-checkbox__label">Я погоджуюся з умовами використання та політикою бренду</label>
+                </div>
+                <div class="custom-checkbox">
+                  <input type="checkbox" id="newsletter" class="custom-checkbox__input" />
+                  <label for="newsletter" class="custom-checkbox__label">Підписатися на ексклюзивні новинки та закриті розпродажі</label>
+                </div>
               </div>
             </fieldset>
             <button type="submit" class="btn btn_type_primary">Зареєструватись</button>
@@ -99,6 +119,7 @@
         <ul class="footer__list">
           <li class="footer__item"><a href="../index.html" class="footer__link">Головна</a></li>
           <li class="footer__item"><a href="../catalog/index.html" class="footer__link">Каталог</a></li>
+          <li class="footer__item"><a href="../about/index.html" class="footer__link">Про бренд</a></li>
           <li class="footer__item"><a href="index.html" class="footer__link">Реєстрація</a></li>
         </ul>
       </nav>
