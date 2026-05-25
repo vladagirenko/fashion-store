@@ -8,21 +8,21 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">MODE</a>
-      <nav class="main-nav" aria-label="Головне меню">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link active">Головна</a></li>
-          <li class="has-dropdown">
-            <a href="catalog/index.html" class="nav-link">Каталог</a>
-            <ul class="dropdown">
-              <li><a href="catalog/index.html#dresses">Сукні</a></li>
-              <li><a href="catalog/index.html#shirts">Сорочки</a></li>
-              <li><a href="catalog/index.html#tshirts">Футболки</a></li>
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">MODE</a>
+      <nav class="header__nav" aria-label="Головне меню">
+        <ul class="header__list">
+          <li class="header__item"><a href="index.html" class="header__link header__link_active">Головна</a></li>
+          <li class="header__item header__item_has-dropdown">
+            <a href="catalog/index.html" class="header__link">Каталог</a>
+            <ul class="header__dropdown">
+              <li class="header__dropdown-item"><a href="catalog/index.html#dresses" class="header__dropdown-link">Сукні</a></li>
+              <li class="header__dropdown-item"><a href="catalog/index.html#shirts" class="header__dropdown-link">Сорочки</a></li>
+              <li class="header__dropdown-item"><a href="catalog/index.html#tshirts" class="header__dropdown-link">Футболки</a></li>
             </ul>
           </li>
-          <li><a href="register/index.html" class="nav-link">Реєстрація</a></li>
+          <li class="header__item"><a href="register/index.html" class="header__link">Реєстрація</a></li>
         </ul>
       </nav>
     </div>
@@ -31,39 +31,39 @@
   <main>
 
     <section class="hero" aria-label="Головний банер">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <span class="hero-eyebrow">Колекція сезону 2026</span>
-          <h1 class="hero-title">Стиль<br /><em>у кожному русі</em></h1>
-          <p class="hero-sub">Створюємо одяг, що підкреслює вашу індивідуальність. Обирайте речі, які стануть продовженням вашого внутрішнього світу.</p>
-          <a href="catalog/index.html" class="btn-primary">До каталогу</a>
-          <div class="hero-stats">
-            <div>
-              <span class="hero-stat-num">10+</span>
-              <span class="hero-stat-label">Новинок</span>
+      <div class="hero__inner">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Колекція сезону 2026</span>
+          <h1 class="hero__title">Стиль<br /><em class="hero__title-em">у кожному русі</em></h1>
+          <p class="hero__sub">Створюємо одяг, що підкреслює вашу індивідуальність. Обирайте речі, які стануть продовженням вашого внутрішнього світу.</p>
+          <a href="catalog/index.html" class="btn btn_type_primary">До каталогу</a>
+          <div class="hero__stats">
+            <div class="hero__stat-item">
+              <span class="hero__stat-num">10+</span>
+              <span class="hero__stat-label">Новинок</span>
             </div>
-            <div>
-              <span class="hero-stat-num">3</span>
-              <span class="hero-stat-label">Категорії</span>
+            <div class="hero__stat-item">
+              <span class="hero__stat-num">3</span>
+              <span class="hero__stat-label">Категорії</span>
             </div>
-            <div>
-              <span class="hero-stat-num">100%</span>
-              <span class="hero-stat-label">Натурально</span>
+            <div class="hero__stat-item">
+              <span class="hero__stat-num">100%</span>
+              <span class="hero__stat-label">Натурально</span>
             </div>
           </div>
         </div>
-        <aside class="hero-aside" aria-label="Анонс товарів">
-          <div class="aside-card">
-            <span class="aside-label">⭐ Популярне</span>
-            <p>Моделююча сукня міні у молочному кольорі</p>
+        <aside class="hero__aside" aria-label="Анонс товарів">
+          <div class="hero__aside-card">
+            <span class="hero__aside-label">⭐ Популярне</span>
+            <p class="hero__aside-text">Моделююча сукня міні у молочному кольорі</p>
           </div>
-          <div class="aside-card">
-            <span class="aside-label">✨ Новинка</span>
-            <p>Оверсайз футболка з витонченим мереживом</p>
+          <div class="hero__aside-card">
+            <span class="hero__aside-label">✨ Новинка</span>
+            <p class="hero__aside-text">Оверсайз футболка з витонченим мереживом</p>
           </div>
-          <div class="aside-card">
-            <span class="aside-label">🔥 Хіт</span>
-            <p>Класична поплінова сорочка — небесно-блакитна</p>
+          <div class="hero__aside-card">
+            <span class="hero__aside-label">🔥 Хіт</span>
+            <p class="hero__aside-text">Класична поплінова сорочка — небесно-блакитна</p>
           </div>
         </aside>
       </div>
@@ -71,104 +71,107 @@
 
     <section class="featured" aria-labelledby="featured-heading">
       <div class="section-header">
-        <span class="section-eyebrow">Ваш вибір</span>
-        <h2 id="featured-heading" class="section-title">Обрані <em>товари</em></h2>
-        <p class="section-sub">Актуальні пропозиції, що стали фаворитами наших клієнток</p>
+        <span class="section-header__eyebrow">Ваш вибір</span>
+        <h2 id="featured-heading" class="section-header__title">Обрані <em class="section-header__title-em">товари</em></h2>
+        <p class="section-header__sub">Актуальні пропозиції, що стали фаворитами наших клієнток</p>
       </div>
-      <div class="product-grid">
 
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="src/images/dress1.jpg" alt="Молочна сукня міні" loading="lazy" />
-            <span class="card-badge">Хіт</span>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Молочна сукня міні з ефектом моделювання</h3>
-            <p class="card-meta">Сукні · еластан / поліестер</p>
-            <a href="catalog/index.html#dress1" class="card-link">Переглянути деталі →</a>
-          </div>
-        </article>
+      <div class="products">
+        <div class="products__grid">
 
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="src/images/dress2.jpg" alt="Сукня міді у квіточку" loading="lazy" />
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Ярусна сукня міді у блакитний квітковий принт</h3>
-            <p class="card-meta">Сукні · легкий шифон</p>
-            <a href="catalog/index.html#dress2" class="card-link">Переглянути деталі →</a>
-          </div>
-        </article>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="src/images/dress1.jpg" alt="Молочна сукня міні" class="product-card__img" loading="lazy" />
+              <span class="product-card__badge product-card__badge_type_hit">Хіт</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Молочна сукня міні з ефектом моделювання</h3>
+              <p class="product-card__meta">Сукні · еластан / поліестер</p>
+              <a href="catalog/index.html#dress1" class="product-card__link">Переглянути деталі →</a>
+            </div>
+          </article>
 
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="src/images/shirt1.jpg" alt="Блакитна сорочка" loading="lazy" />
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Блакитна сорочка з попліну на довгий рукав</h3>
-            <p class="card-meta">Сорочки · натуральна бавовна</p>
-            <a href="catalog/index.html#shirt1" class="card-link">Переглянути деталі →</a>
-          </div>
-        </article>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="src/images/dress2.jpg" alt="Сукня міді у квіточку" class="product-card__img" loading="lazy" />
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Ярусна сукня міді у блакитний квітковий принт</h3>
+              <p class="product-card__meta">Сукні · легкий шифон</p>
+              <a href="catalog/index.html#dress2" class="product-card__link">Переглянути деталі →</a>
+            </div>
+          </article>
 
-        <article class="product-card">
-          <div class="card-img-wrap">
-            <img src="src/images/tshirt1.jpg" alt="Рожева футболка" loading="lazy" />
-            <span class="card-badge">Новинка</span>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Рожева футболка оверсайз із принтом 'Wear Lipstick'</h3>
-            <p class="card-meta">Футболки · щільний котон</p>
-            <a href="catalog/index.html#tshirt1" class="card-link">Переглянути деталі →</a>
-          </div>
-        </article>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="src/images/shirt1.jpg" alt="Блакитна сорочка" class="product-card__img" loading="lazy" />
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Блакитна сорочка з попліну на довгий рукав</h3>
+              <p class="product-card__meta">Сорочки · натуральна бавовна</p>
+              <a href="catalog/index.html#shirt1" class="product-card__link">Переглянути деталі →</a>
+            </div>
+          </article>
 
-      </div>
-      <div class="view-all-wrap">
-        <a href="catalog/index.html" class="btn-outline">Увесь каталог</a>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="src/images/tshirt1.jpg" alt="Рожева футболка" class="product-card__img" loading="lazy" />
+              <span class="product-card__badge product-card__badge_type_new">Новинка</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Рожева футболка оверсайз із принтом 'Wear Lipstick'</h3>
+              <p class="product-card__meta">Футболки · щільний котон</p>
+              <a href="catalog/index.html#tshirt1" class="product-card__link">Переглянути деталі →</a>
+            </div>
+          </article>
+
+        </div>
+        <div class="products__view-all">
+          <a href="catalog/index.html" class="btn btn_type_outline">Увесь каталог</a>
+        </div>
       </div>
     </section>
 
-    <section class="order-section" aria-labelledby="order-heading">
-      <div class="order-section-inner">
+    <section class="order" aria-labelledby="order-heading">
+      <div class="order__inner">
         <div class="section-header">
-          <span class="section-eyebrow">Сервіс</span>
-          <h2 id="order-heading" class="section-title">Як замовити образ від <em>MODE</em></h2>
+          <span class="section-header__eyebrow">Сервіс</span>
+          <h2 id="order-heading" class="section-header__title">Як замовити образ від <em class="section-header__title-em">MODE</em></h2>
         </div>
-        <ol class="order-steps">
+        <ol class="order__steps">
 
-          <li class="order-step">
-            <div class="step-marker">01</div>
-            <div class="step-content">
-              <strong class="step-title">Вибір та консультація</strong>
-              <ul class="step-sub">
-                <li>Обирайте моделі в нашому онлайн-каталозі.</li>
-                <li>Отримайте допомогу з підбором розміру в онлайн-чаті.</li>
-                <li>Оплачуйте онлайн або при отриманні замовлення.</li>
+          <li class="order__step">
+            <div class="order__step-marker">01</div>
+            <div class="order__step-content">
+              <strong class="order__step-title">Вибір та консультація</strong>
+              <ul class="order__sub-list">
+                <li class="order__sub-item">Обирайте моделі в нашому онлайн-каталозі.</li>
+                <li class="order__sub-item">Отримайте допомогу з підбором розміру в онлайн-чаті.</li>
+                <li class="order__sub-item">Оплачуйте онлайн або при отриманні замовлення.</li>
               </ul>
             </div>
           </li>
 
-          <li class="order-step">
-            <div class="step-marker">02</div>
-            <div class="step-content">
-              <strong class="step-title">Якість та пакування</strong>
-              <ul class="step-sub">
-                <li>Ретельна перевірка кожного виробу перед відправкою.</li>
-                <li>Пакування у фірмову еко-коробку для збереження форми.</li>
-                <li>Приємне доповнення до кожної вашої покупки.</li>
+          <li class="order__step">
+            <div class="order__step-marker">02</div>
+            <div class="order__step-content">
+              <strong class="order__step-title">Якість та пакування</strong>
+              <ul class="order__sub-list">
+                <li class="order__sub-item">Ретельна перевірка кожного виробу перед відправкою.</li>
+                <li class="order__sub-item">Пакування у фірмову еко-коробку для збереження форми.</li>
+                <li class="order__sub-item">Приємне доповнення до кожної вашої покупки.</li>
               </ul>
             </div>
           </li>
 
-          <li class="order-step">
-            <div class="step-marker">03</div>
-            <div class="step-content">
-              <strong class="step-title">Швидка доставка</strong>
-              <ul class="step-sub">
-                <li>Відправка замовлень поштовими службами за 24 години.</li>
-                <li>Зручна примірка у відділенні перед фінальною оплатою.</li>
-                <li>Знижка 10% на наступне замовлення за ваш відгук.</li>
+          <li class="order__step">
+            <div class="order__step-marker">03</div>
+            <div class="order__step-content">
+              <strong class="order__step-title">Швидка доставка</strong>
+              <ul class="order__sub-list">
+                <li class="order__sub-item">Відправка замовлень поштовими службами за 24 години.</li>
+                <li class="order__sub-item">Зручна примірка у відділенні перед фінальною оплатою.</li>
+                <li class="order__sub-item">Знижка 10% на наступне замовлення за ваш відгук.</li>
               </ul>
             </div>
           </li>
@@ -177,48 +180,48 @@
       </div>
     </section>
 
-    <div class="dark-section" aria-labelledby="materials-heading">
-      <div class="dark-section-inner">
+    <div class="materials">
+      <div class="materials__inner">
         <div class="section-header">
-          <span class="section-eyebrow">Матеріали</span>
-          <h2 id="materials-heading" class="section-title section-title--light">Характеристики тканин</h2>
-          <p class="section-sub section-sub--light">Дізнайтеся більше про склад та особливості догляду</p>
+          <span class="section-header__eyebrow">Матеріали</span>
+          <h2 id="materials-heading" class="section-header__title section-header__title_theme_light">Характеристики тканин</h2>
+          <p class="section-header__sub section-header__sub_theme_light">Дізнайтеся більше про склад та особливості догляду</p>
         </div>
-        <div class="table-wrap">
-          <table class="materials-table">
-            <caption>Склад та рекомендації з догляду за виробами</caption>
-            <thead>
-              <tr>
-                <th scope="col">Категорія</th>
-                <th scope="col">Тканина</th>
-                <th scope="col">Склад</th>
-                <th scope="col">Догляд</th>
+        <div class="materials__table-wrap">
+          <table class="materials__table">
+            <caption class="materials__caption">Склад та рекомендації з догляду за виробами</caption>
+            <thead class="materials__thead">
+              <tr class="materials__row">
+                <th scope="col" class="materials__th">Категорія</th>
+                <th scope="col" class="materials__th">Тканина</th>
+                <th scope="col" class="materials__th">Склад</th>
+                <th scope="col" class="materials__th">Догляд</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td><strong>Сукні</strong></td>
-                <td>Шовк Армані</td>
-                <td>95% поліестер, 5% еластан</td>
-                <td>Прання при 30°C (делікатний режим)</td>
+            <tbody class="materials__tbody">
+              <tr class="materials__row">
+                <td class="materials__td"><strong class="materials__accent-text">Сукні</strong></td>
+                <td class="materials__td">Шовк Армані</td>
+                <td class="materials__td">95% поліестер, 5% еластан</td>
+                <td class="materials__td">Прання при 30°C (делікатний режим)</td>
               </tr>
-              <tr>
-                <td><strong>Сорочки</strong></td>
-                <td>Бавовняний поплін</td>
-                <td>100% бавовна</td>
-                <td>Машинне прання та легке прасування</td>
+              <tr class="materials__row">
+                <td class="materials__td"><strong class="materials__accent-text">Сорочки</strong></td>
+                <td class="materials__td">Бавовняний поплін</td>
+                <td class="materials__td">100% бавовна</td>
+                <td class="materials__td">Машинне прання та легке прасування</td>
               </tr>
-              <tr>
-                <td><strong>Футболки</strong></td>
-                <td>Кулірна гладь</td>
-                <td>95% бавовна, 5% лайкра</td>
-                <td>Делікатний віджим, сушка в тіні</td>
+              <tr class="materials__row">
+                <td class="materials__td"><strong class="materials__accent-text">Футболки</strong></td>
+                <td class="materials__td">Кулірна гладь</td>
+                <td class="materials__td">95% бавовна, 5% лайкра</td>
+                <td class="materials__td">Делікатний віджим, сушка в тіні</td>
               </tr>
-              <tr>
-                <td><strong>Костюми</strong></td>
-                <td>Вовна з віскозою</td>
-                <td>50% вовна, 50% віскоза</td>
-                <td>Рекомендована професійна чистка</td>
+              <tr class="materials__row">
+                <td class="materials__td"><strong class="materials__accent-text">Костюми</strong></td>
+                <td class="materials__td">Вовна з віскозою</td>
+                <td class="materials__td">50% вовна, 50% віскоза</td>
+                <td class="materials__td">Рекомендована професійна чистка</td>
               </tr>
             </tbody>
           </table>
@@ -226,14 +229,14 @@
       </div>
     </div>
 
-    <div class="video-section" aria-labelledby="video-heading">
-      <div class="video-section-inner">
+    <div class="video">
+      <div class="video__inner">
         <div class="section-header">
-          <span class="section-eyebrow">Відео</span>
-          <h2 id="video-heading" class="section-title section-title--light"><em>Наша атмосфера</em></h2>
+          <span class="section-header__eyebrow">Відео</span>
+          <h2 id="video-heading" class="section-header__title section-header__title_theme_light"><em class="section-header__title-em">Наша атмосфера</em></h2>
         </div>
-        <div class="video-wrap">
-          <video controls poster="src/images/dress1.jpg" aria-label="Промо-відео MODE">
+        <div class="video__wrap">
+          <video controls poster="src/images/dress1.jpg" class="video__element" aria-label="Промо-відео MODE">
             <source src="src/video/promo.mp4" type="video/mp4" />
             Ваш браузер не підтримує відео.
           </video>
@@ -241,28 +244,30 @@
       </div>
     </div>
 
-    <section class="map-link-section">
-      <div class="section-header">
-        <h2 class="section-title">Завітайте <em>до нас</em></h2>
-        <p class="section-desc">Наш шоурум знаходиться у центрі міста. Будемо раді бачити вас!</p>
-        <a href="https://maps.app.goo.gl/CNLAZZ3qxLr9SWVu5" target="_blank" class="btn-primary">Знайти нас на Google Maps</a>
+    <section class="map">
+      <div class="map__inner">
+        <div class="section-header">
+          <h2 class="section-header__title">Завітайте <em class="section-header__title-em">до нас</em></h2>
+          <p class="map__desc">Наш шоурум знаходиться у центрі міста. Будемо раді бачити вас!</p>
+          <a href="https://maps.app.goo.gl/CNLAZZ3qxLr9SWVu5" target="_blank" class="btn btn_type_primary">Знайти нас на Google Maps</a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p class="footer-logo">MODE</p>
-      <p class="footer-tagline">Якісний жіночий одяг · Україна · 2026</p>
-      <nav aria-label="Меню підвалу">
-        <ul class="footer-nav">
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="catalog/index.html">Каталог</a></li>
-          <li><a href="register/index.html">Реєстрація</a></li>
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__logo">MODE</p>
+      <p class="footer__tagline">Якісний жіночий одяг · Україна · 2026</p>
+      <nav class="footer__nav" aria-label="Меню підвалу">
+        <ul class="footer__list">
+          <li class="footer__item"><a href="index.html" class="footer__link">Головна</a></li>
+          <li class="footer__item"><a href="catalog/index.html" class="footer__link">Каталог</a></li>
+          <li class="footer__item"><a href="register/index.html" class="footer__link">Реєстрація</a></li>
         </ul>
       </nav>
-      <p class="footer-copy">&copy; 2026 MODE. Виготовлено в Україні.</p>
+      <p class="footer__copy">© 2026 MODE. Виготовлено в Україні.</p>
     </div>
   </footer>
 
