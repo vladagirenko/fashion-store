@@ -64,6 +64,7 @@ ul {
   padding: 0 25px;
   height: 75px;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -418,10 +419,12 @@ ul {
   margin: 0 auto;
 }
 
+/* Оновлено з Grid на Flexbox макет відповідно до завдань роботи */
 .order__steps {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 50px;
 }
@@ -436,7 +439,12 @@ ul {
   padding: 30px 25px;
   box-shadow: var(--shadow);
   transition: box-shadow var(--speed), transform var(--speed);
-  height: 100%;
+  
+  /* Властивості самостійного вивчення: гнучкий базовий розмір та розширення */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(33.333% - 20px);
+  min-width: 280px;
 }
 
 .order__step:hover {
@@ -455,6 +463,9 @@ ul {
   min-width: 40px;
   text-align: center;
   transition: opacity var(--speed);
+  
+  /* Самостійне вивчення: поодиноке вертикальне вирівнювання елемента */
+  align-self: center;
 }
 
 .order__step:hover .order__step-marker {
@@ -712,10 +723,11 @@ ul {
   padding: 0 20px;
 }
 
+/* Переведено з Grid на Flexbox для виконання домашніх завдань 2 і 3 методички */
 .about-collage__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(180px, auto);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -726,34 +738,45 @@ ul {
   box-shadow: var(--shadow);
 }
 
+/* Головний блок: росте й стискається вдвічі швидше за сусідні елементи (коефіцієнт 2) */
 .about-collage__item_type_text-main {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
   padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: calc(60% - 20px);
+  min-width: 300px;
 }
 
 .about-collage__item_type_img-large {
-  grid-column: 3 / span 2;
-  grid-row: 1 / span 2;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(40% - 20px);
+  min-width: 250px;
 }
 
 .about-collage__item_type_img-small {
-  grid-column: 1 / span 2;
-  grid-row: 3;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(40% - 20px);
+  min-width: 250px;
 }
 
 .about-collage__item_type_text-side {
-  grid-column: 3 / span 2;
-  grid-row: 3;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #f0ebe4;
+  
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(60% - 20px);
+  min-width: 300px;
 }
 
 .about-collage__img {
@@ -795,9 +818,11 @@ ul {
   margin: 0 auto;
 }
 
+/* Переформатовано на Flexbox макет */
 .values__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 50px;
 }
@@ -809,12 +834,20 @@ ul {
   box-shadow: var(--shadow);
   border-top: 3px solid var(--border);
   transition: transform 0.3s;
+  
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 280px;
 }
 
 .values__card:hover {
   transform: translateY(-5px);
   border-top-color: var(--accent);
 }
+
+/* Демонстрація використання властивості order з теми самостійного вивчення */
+.values__card_order_first { order: 1; }
+.values__card_order_second { order: 2; }
+.values__card_order_third { order: 3; }
 
 .values__card-title {
   display: block;
@@ -962,65 +995,16 @@ ul {
   box-shadow: 0 0 0 3px rgba(241, 109, 177, 0.15);
 }
 
+/* Оптимізовані медіа-запити: Flexbox самостійно згортає картки завдяки флекс-базису та wrap */
 @media (max-width: 768px) and (orientation: portrait) {
-  .about-collage__grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-  }
-
-  .about-collage__item_type_text-main,
-  .about-collage__item_type_img-large,
-  .about-collage__item_type_img-small,
-  .about-collage__item_type_text-side {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .about-collage__item_type_text-main {
-    padding: 30px 20px;
-  }
-
-  .about-collage__item_type_text-side {
-    padding: 30px 20px;
-  }
-
   .values__grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 20px;
   }
 }
 
 @media (max-width: 950px) and (orientation: landscape) {
-  .about-collage__grid {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(160px, auto);
-    gap: 20px;
-  }
-
-  .about-collage__item_type_text-main {
-    grid-column: 1 / span 2;
-    grid-row: auto;
-    padding: 35px;
-  }
-
-  .about-collage__item_type_img-large {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .about-collage__item_type_img-small {
-    grid-column: 2;
-    grid-row: auto;
-  }
-
-  .about-collage__item_type_text-side {
-    grid-column: 1 / span 2;
-    grid-row: auto;
-    padding: 35px;
-  }
-
   .values__grid {
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
   
@@ -1047,9 +1031,6 @@ ul {
   .register__layout {
     grid-template-columns: 1fr;
     gap: 50px;
-  }
-  .order__steps {
-    grid-template-columns: 1fr;
   }
 }
 
