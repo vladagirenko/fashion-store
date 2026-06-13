@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MODE — Магазин жіночого одягу</title>
   <link rel="stylesheet" href="css/style.css" />
+  
+  <!--[if lt IE 10]>
+    <link rel="stylesheet" type="text/css" href="css/ie-fix.css" />
+  <![endif]-->
 </head>
 <body>
 
@@ -82,7 +86,10 @@
 
           <article class="product-card">
             <div class="product-card__img-wrap">
-              <img src="src/images/dress1.jpg" alt="Молочна сукня міні" class="product-card__img" loading="lazy" />
+              <picture>
+                <source srcset="src/images/dress1.webp" type="image/webp" />
+                <img src="src/images/dress1.jpg" alt="Молочна сукня міні" class="product-card__img" loading="lazy" />
+              </picture>
               <span class="product-card__badge product-card__badge_type_hit">Хіт</span>
             </div>
             <div class="product-card__body">
@@ -144,7 +151,7 @@
           <li class="order__step">
             <div class="order__step-marker">01</div>
             <div class="order__step-content">
-              <strong class="order__step-title">Вибір та консультація</strong>
+              <nav><strong class="order__step-title">Вибір та консультація</strong></nav>
               <ul class="order__sub-list">
                 <li class="order__sub-item">Обирайте моделі в нашому онлайн-каталозі.</li>
                 <li class="order__sub-item">Отримайте допомогу з підбором розміру в онлайн-чаті.</li>
