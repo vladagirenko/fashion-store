@@ -2,3 +2,26 @@
     width: 100%;
     height: auto; 
 }
+
+
+body {
+    background: #f9f7f4 !important;
+    color: #18181f !important;
+    font-family: Arial, sans-serif !important;
+}
+
+
+.hero__inner, .products__grid, .register__layout, .order__steps {
+    display: block !important;
+}
+
+
+.header {
+    background: #0f0f14 !important;
+    position: relative !important;
+}
+
+.header__link {
+    color: #ffffff !important;
+    padding: 0 10px;
+}
